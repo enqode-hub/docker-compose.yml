@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - 6379:6379
